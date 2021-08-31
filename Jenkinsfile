@@ -4,7 +4,7 @@ pipeline {
     stage('Clean Workspace') {
       steps {
         echo 'Workspace Cleaning'
-        sh 'cleanWs()'
+        cleanWs(cleanWhenSuccess: true, cleanWhenNotBuilt: true)
       }
     }
 
