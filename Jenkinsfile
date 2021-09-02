@@ -34,7 +34,7 @@ pipeline {
 
     stage('RUN') {
       steps {
-        sh 'docker run -p 8088:80 letsdeploy'
+        sh 'docker run -p 8088:80 -d letsdeploy'
       }
     }
 
