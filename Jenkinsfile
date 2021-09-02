@@ -26,5 +26,17 @@ pipeline {
       }
     }
 
+    stage('Build Docker Image') {
+      steps {
+        sh 'docker build . --tag letsdeploy'
+      }
+    }
+
+    stage('RUN') {
+      steps {
+        sh 'docker run -p 8088:80 letsdeploy'
+      }
+    }
+
   }
 }
