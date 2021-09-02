@@ -28,7 +28,7 @@ pipeline {
 
     stage('Build Docker Image') {
       steps {
-        sh 'sudo docker build . --tag letsdeploy'
+        sh 'docker build . --tag letsdeploy'
       }
     }
 
