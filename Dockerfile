@@ -14,4 +14,4 @@ RUN dotnet publish LetsDeploy.csproj -c Release -o /publish
 FROM base AS final
 WORKDIR /api
 COPY --from=publish /publish .
-ENTRYPOINT ["dotnet", "Api.dll"]
+ENTRYPOINT ["dotnet", "LetsDeploy.dll"]
