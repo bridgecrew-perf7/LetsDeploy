@@ -29,7 +29,6 @@ pipeline {
     stage('Build Docker Image') {
       steps {
         sh 'docker build . --tag letsdeploy'
-        sh 'docker kill "$(docker ps -q)"'
       }
     }
 
