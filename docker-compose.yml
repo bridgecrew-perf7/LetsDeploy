@@ -1,0 +1,12 @@
+version: "3.4"
+
+services:
+  api:
+    container_name: "api-container"
+    restart: always
+    build:
+     context: .
+     dockerfile: dockerfile
+    ports:
+      - "8088:80"
+    
