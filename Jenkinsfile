@@ -26,17 +26,10 @@ pipeline {
       }
     }
 
-    stage('Build Docker Image') {
+    stage('Docker Compose Up') {
       steps {
-        sh 'docker build . --tag letsdeploy'
+        sh 'docker-compose up --build -d'
       }
     }
-
-    stage('RUN') {
-      steps {
-        sh 'docker run -p 8088:80 -d letsdeploy'
-      }
-    }
-
   }
 }
