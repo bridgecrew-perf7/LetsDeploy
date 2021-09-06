@@ -5,6 +5,6 @@ namespace LetsDeploy.Controllers
     [Route("[controller]")]
     public class DeployController : ControllerBase
     {
-        public IActionResult Get() => Ok("SALAAAAG");
+        public IActionResult Get() => Ok("CI Deploy");
     }
 }
